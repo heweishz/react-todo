@@ -10,7 +10,7 @@ function App() {
 
   useEffect(() => {
     getLocalTodos()
-  })
+  }, [])
   useEffect(() => {
     filterHander()
     saveLocalTodos()
@@ -41,10 +41,10 @@ function App() {
     localStorage.setItem('todos', JSON.stringify(todos))
   }
   function getLocalTodos() {
-    if (localStorage.getItem('todos') === null) {
-      // localStorage.setItem('todos', JSON.stringify([]))
+    if (localStorage.getItem('todos') == null) {
+      localStorage.setItem('todos', JSON.stringify([]))
     } else {
-      let localData = JSON.parse(localStorage.getItem('todos'))
+      setTodos(JSON.parse(localStorage.getItem('todos')))
     }
   }
   return (
