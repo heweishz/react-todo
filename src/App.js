@@ -10,7 +10,8 @@ function App() {
 
   useEffect(() => {
     getLocalTodos()
-  }, [])
+  },[])
+>>>>>>> 7f7dc561f441bd8b623f488d5a4203eece307ef9
   useEffect(() => {
     filterHander()
     saveLocalTodos()
@@ -50,7 +51,8 @@ function App() {
   return (
     <div className='App'>
       <header>
-        <h1>React Todo List{textInput}</h1>
+        <h1>React Todo List</h1>
+
       </header>
       <Form
         setTextInput={setTextInput}
